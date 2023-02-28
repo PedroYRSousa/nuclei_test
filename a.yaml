@@ -1,0 +1,34 @@
+id: CWE-798
+
+info:
+  author: yago
+  name: a
+  tags: teste
+  severity: critical
+
+file:
+  - extensions:
+      - txt
+
+    extractors:
+      - type: regex
+        name: Funcional
+        regex:
+          - "'([0-9]{9})'"
+          - '"([0-9]{9})"'
+
+      - type: regex
+        name: Funcional geral
+        regex:
+          - " ([0-9]{9}) "
+
+      - type: regex
+        name: Racf
+        regex:
+          - "'([a-zA-z]{7})'"
+          - '"([a-zA-z]{7})"'
+
+      - type: regex
+        name: Racf geral
+        regex:
+          - " ([a-zA-z]{7}) "
